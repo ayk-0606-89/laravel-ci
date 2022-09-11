@@ -45,6 +45,7 @@ jobs:
                npm run prod && \
                php artisan migrate --force && \
                php artisan config:cache"
+            command: |
              sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
              sudo apt-get update
 
