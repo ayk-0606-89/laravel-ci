@@ -49,15 +49,15 @@ jobs:
              sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
              sudo apt-get update
 
- workflows:
-   version: 2
-   build_deploy:
-     jobs:
-       - build
-       - deploy:
-           requires:
-             - build
-           filters:
-             branches:
-               only:
-                 - master
+  workflows:
+    version: 2
+    build_deploy:
+      jobs:
+        - build
+        - deploy:
+            requires:
+              - build
+            filters:
+              branches:
+                only:
+                  - master
